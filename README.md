@@ -1,6 +1,8 @@
 Needed package:
 !pip install torch-scatter torch-cluster
+
 !pip install torch-geometric
+
 !pip install ase e3nn
  
 The main Notebook is EGNN.ipynb
