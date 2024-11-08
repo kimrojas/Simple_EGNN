@@ -99,7 +99,11 @@ def transform_data(data, new_pos):
     # entry.positions = deepcopy(new_pos).detach()
     # entry.positions = new_pos.clone().detach()
     # entry.positions = new_pos.detach()
-    entry.positions = new_pos.clone().detach().numpy()
+    if type(new_pos) == torch.Tensor:
+        new_pos = new_pos.clone().detach().numpy()
+    else:
+        new_pos = new_pos.copy()
+    entry.positions = new_pos
     _data = build_data(entry, target, r_max)
 
     return _data
