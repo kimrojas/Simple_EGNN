@@ -1,7 +1,9 @@
-pip install torch==2.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch==2.4 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
-CUDA=cu118
+CUDA=cu121
 pip install torch-scatter torch-cluster -f https://data.pyg.org/whl/torch-2.1.0+${CUDA}.html
+pip install torch-scatter torch-cluster -f https://data.pyg.org/whl/torch-2.4.0+${CUDA}.html
+pip install torch-scatter torch-cluster
 pip install torch-geometric
-pip install ase e3nn
-pip install scikit-learn
+pip install 
+pip install ase e3nn scikit-learn matplotlib jupyterlab pandas plotly
